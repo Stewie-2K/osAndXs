@@ -29,63 +29,63 @@ namespace osAndXs
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(0);
+            bool result = g.addCounter(0,0);
             if (result == true) updateGUI();
 
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(1);
+            bool result = g.addCounter(0,1);
             if (result == true) updateGUI();
 
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(2);
+            bool result = g.addCounter(0,2);
             if (result == true) updateGUI();
 
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(3);
+            bool result = g.addCounter(1,0);
             if (result == true) updateGUI();
 
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(4);
+            bool result = g.addCounter(1,1);
             if (result == true) updateGUI();
 
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(5);
+            bool result = g.addCounter(1,2);
             if (result == true) updateGUI();
 
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(6);
+            bool result = g.addCounter(2,0);
             if (result == true) updateGUI();
 
         }
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(7);
+            bool result = g.addCounter(2,1);
             if (result == true) updateGUI();
 
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
         {
-            bool result = g.addCounter(8);
+            bool result = g.addCounter(2,2);
             if (result == true) updateGUI();
 
         }
@@ -104,18 +104,21 @@ namespace osAndXs
         {
 
         }
-
         private void updateGUI()
         {
-            Button[] bs = { P1, P2, P3, P4, P5, P6, P7, P8, P9 };
+            Button[,] bs = { { P1, P2, P3 }, { P4, P5, P6 }, { P7, P8, P9 } };
             Board b = g.getBoard();
-            int[] elementsBoard = b.getBoard();
-            
-            for(int x=0; x < elementsBoard.Length; x++)
+            int[,] elementsBoard = b.getBoard();
+
+            for (int x = 0; x < 3; x++)
             {
-                if (elementsBoard[x] == 0) bs[x].Content = " ";
-                if (elementsBoard[x] == 1) bs[x].Content = "O";
-                if (elementsBoard[x] == 2) bs[x].Content = "X";
+                for (int y = 0; y < 3; y++)
+                {
+                    if (elementsBoard[x, y] == 0) bs[x, y].Content = " ";
+                    if (elementsBoard[x, y] == 1) bs[x, y].Content = "O";
+                    if (elementsBoard[x, y] == 2) bs[x, y].Content = "X";
+                }
+
             }
 
         }

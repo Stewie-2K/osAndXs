@@ -30,9 +30,9 @@
         <Button x:Name="P7" Grid.Row="2" Grid.Column="0" Click="Button_Click_6"></Button>
         <Button x:Name="P8" Grid.Row="2" Grid.Column="1" Click="Button_Click_7"></Button>
         <Button x:Name="P9" Grid.Row="2" Grid.Column="2" Click="Button_Click_8"></Button>
-        <Button Grid.Row="3" Grid.Column="0" Click="Button_Click_9">Restart</Button>
-        <Button Grid.Row="3" Grid.Column="1" Click="Button_Click_10">Start</Button>
-        <Button Grid.Row="3" Grid.Column="2" Click="Button_Click_11">Save</Button>
+        <Button Grid.Row="3" Grid.Column="0" Click="Button_Click_9" FontFamily="Rosewood Std Regular" FontSize="36">Restart</Button>
+        <Button Grid.Row="3" Grid.Column="1" Click="Button_Click_10" FontFamily="Rosewood Std Regular" FontSize="36">Start</Button>
+        <Button Grid.Row="3" Grid.Column="2" Click="Button_Click_11" FontFamily="Rosewood Std Regular" FontSize="36">Save</Button>
 
 
     </Grid>

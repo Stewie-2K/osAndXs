@@ -16,10 +16,10 @@ namespace osAndXs
             turn = 1;
         }
 
-        public bool addCounter(int pos)
+        public bool addCounter(int x, int y)
         {
             bool added = false;
-            added = board.addCounter(pos, turn);
+            added = board.addCounter(x, y, turn);
             if (added == true) 
             { 
                 if (turn == 1)

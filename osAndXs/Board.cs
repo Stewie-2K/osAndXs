@@ -8,25 +8,25 @@ namespace osAndXs
 {
     class Board
     {
-        private int[] board = new int[9];
+        private int[,] board = new int[3,3];
 
-        public bool addCounter(int pos, int counter)
+        public bool addCounter(int x,int y, int counter)
         {
             bool added = false;
-            if(pos<0 || pos>8) return false;
+            if(x < 0 || x > 3 || y < 0 || y > 3) return false;
             if (counter != 1 && counter != 2) return false;
 
             
-            if (board[pos] == 0)
+            if (board[x,y] == 0)
             {
-                board[pos] = counter;
+                board[x,y] = counter;
                 added = true;
             }
 
             return added;
         }
 
-        public int[] getBoard()
+        public int[,] getBoard()
         {
             return board;
         }
